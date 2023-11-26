@@ -199,8 +199,13 @@ function roundToPowerOfTen(num, pow) {
  *   16 => false
  *   17 => true
  */
-function isPrime(/* n */) {
-  throw new Error('Not implemented');
+function isPrime(n) {
+  for (let counter = 2; counter <= n / 2; counter += 1) {
+    if (n % counter === 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /**
@@ -290,8 +295,13 @@ function getSumToN(n) {
  *   202 => 4  // (2+0+2)
  *   5   => 5  // 5
  */
-function getSumOfDigits(/* num */) {
-  throw new Error('Not implemented');
+function getSumOfDigits(num) {
+  let total = 0;
+  let value = num;
+  for (; value > 0; value = Math.floor(value / 10)) {
+    total += value % 10;
+  }
+  return total;
 }
 
 /**
