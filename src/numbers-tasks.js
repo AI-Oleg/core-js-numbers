@@ -255,10 +255,10 @@ function getFibonacciNumber(index) {
   let f0 = 0;
   let f1 = 1;
   let f2 = 1;
-  let result = 1;
-  while (result < index) {
+  let current = 1;
+  while (current < index) {
     f2 = f0 + f1;
-    result += 1;
+    current += 1;
     [f0, f1] = [f1, f2];
   }
   return f2;
